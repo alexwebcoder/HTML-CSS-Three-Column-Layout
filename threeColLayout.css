@@ -1,0 +1,382 @@
+
+body {
+
+  background:#ccc;
+  color:#061539;
+  font-family:arial, sans-serif;
+  line-height:1.5;
+  margin:0;
+  padding:0;
+
+}
+
+figure.logo {
+
+  margin:0;
+  padding:12px;
+  float:left;
+
+}
+
+.menu {
+
+  display:none;
+
+}
+
+
+
+/*mobile menu bar at 600px or less*/
+
+
+.nav ul {
+
+  background:#374360;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  text-align:center; 
+
+}
+
+.nav li {
+
+  border-bottom:1px solid #316969;
+  font-size:1.2em;
+  height:auto;/*changed this to auto because fixed height was not containing the submenu, browser will calculate ht. based on it's contents*/
+  line-height:40px;
+
+}
+
+.nav a {
+  
+  color:white;
+  display:block;
+  text-decoration:none;
+  transition:background .3s linear;
+  
+}
+
+.nav a:hover {
+
+  background:#316969;
+
+}
+
+.nav a:focus {
+
+  background:#fff;
+  color:#444;
+  cursor:default;
+
+}
+
+/*submenus*/
+
+@-webkit-keyframes fadeIn {
+0% { opacity: 0; }
+20% { opacity: 0; }
+40% { opacity: 0.3; }
+60% { opacity: 0.5; }
+80% { opacity: 0.9; }
+100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+0% { opacity: 0; }
+20% { opacity: 0; }
+40% { opacity: 0.3; }
+60% { opacity: 0.5; }
+80% { opacity: 0.9; }
+100% { opacity: 1; }
+}
+
+
+.nav li li {
+
+  background:#499d9d;
+  display:none;
+  font-size:.8em; /*list items that are nested */
+  
+}
+
+.nav li:hover li {
+
+  display:block;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+
+}
+
+/*end of mobile menu bar*/
+
+* {
+
+  box-sizing:border-box;
+
+}
+
+div#container {
+
+  position:relative;
+ 
+}
+
+.clearfix:before, .clearfix:after {
+
+  content:"";
+  display:block;
+
+}
+
+.clearfix:after {
+
+  clear:both;
+
+}
+
+.clearfix {
+
+  *zoom:1;
+  
+}
+
+section {
+   
+  background:#cacfdd;
+  padding:16px;
+  width:100%;
+  
+}
+
+article {
+  
+  background:#DEE0E7;
+  padding:16px;
+  width:100%;
+  
+}
+
+aside {
+
+  background:#A3BABA;
+  padding:16px;
+  width:100%;
+   
+}
+
+h1 {
+
+  text-align:center;
+
+}
+
+
+p {
+
+  margin:16px;
+
+}
+
+footer {
+
+  background:#4F628E;
+  clear:both;
+  height:50px;
+
+}
+
+.books {
+
+  margin:0 auto;
+
+}
+
+.books img {
+
+  display:block;
+  height:auto;
+  margin:0 auto;
+  max-width:100%;
+    
+}
+
+
+/*********Style menu for larger screens (600 px and above)
+Am using 600px breakpoint, width of each item is 120px X 5 = 600px*************/
+
+@media (min-width:600px) {
+
+  figure.logo {
+
+    float:left;
+
+  }
+
+  
+
+  .nav li {
+
+    border-bottom:none;
+    display:inline-block;
+    line-height:80px;
+    height:80px;
+    margin-right:-4px;
+    width:120px;
+   
+  }
+  
+  
+  .nav ul {
+
+    float:left;
+    padding:0;
+    width:100%;
+    
+  }
+  
+  .nav {
+
+    height:80px;
+    overflow:auto;
+ 
+  }
+  
+  .nav li ul {
+
+    display:none;
+    position:absolute;
+    
+  }
+  
+  .nav li:hover ul {
+
+    display:block;
+    width:inherit;
+   
+  }
+  
+  section {
+
+    float:left; 
+    width:33.3%;
+
+  }
+
+  section:before {
+
+    background:#cacfdd;
+    content:"";
+    position:absolute;
+      bottom:0;
+      left:0;
+      top:0;
+      z-index:-1;
+    width:33.3%;
+
+  }
+
+  article {
+    
+    float:left;
+    width:33.3%;
+
+  }
+
+  article:before {
+
+    background:#DEE0E7;
+    content:"";
+    position:absolute;
+      bottom:0;
+      left:33.3%;
+      top:0;
+      z-index:-1;
+    width:33.3%;
+  
+  }
+
+  aside {
+
+    background:#A3BABA;
+    float:left;
+    width:33.3%;
+    
+  }
+
+  aside:before {
+
+    background:#A3BABA;
+    content:"";
+    position:absolute;
+      bottom:0;
+      left:66.6%;
+      top:0;
+      z-index:-1;
+    width:33.3%;
+  
+  }
+  
+}
+
+/***breakpoint for the width of the columns, anything below 825 px*****/
+
+@media(max-width:825px) {
+
+  section, article, aside {
+
+    width:100%;
+
+  }
+
+}
+
+
+@media(max-width:480px) {
+
+  .menu {
+
+    background:#374360;
+    color:white;
+    cursor:pointer;
+    display:block;
+    font-size:1.2em;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+
+  }
+
+  .menu:hover {
+
+    background:#316969;
+
+  }
+
+nav {
+
+    display: none;
+
+  }
+
+.menuOpen {
+
+  display:block;
+  
+  }
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
