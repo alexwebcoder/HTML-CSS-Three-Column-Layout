@@ -10,6 +10,12 @@ body {
 
 }
 
+h1 {
+
+  text-align:center;
+
+}
+
 figure.logo {
 
   margin:0;
@@ -167,12 +173,6 @@ aside {
    
 }
 
-h1 {
-
-  text-align:center;
-
-}
-
 
 p {
 
@@ -215,8 +215,6 @@ Am using 600px breakpoint, width of each item is 120px X 5 = 600px*************/
 
   }
 
-  
-
   .nav li {
 
     border-bottom:none;
@@ -227,7 +225,6 @@ Am using 600px breakpoint, width of each item is 120px X 5 = 600px*************/
     width:120px;
    
   }
-  
   
   .nav ul {
 
